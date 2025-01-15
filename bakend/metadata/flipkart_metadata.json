@@ -1,0 +1,125 @@
+{
+    "allappliances": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "flipkartusers": [
+        "Full Name",
+        "Address",
+        "Phone Number",
+        "Email ID",
+        "user_id"
+    ],
+    "global_flipkart_products_view": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "globalflipkartproductsmv": [
+        "primary_key",
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "headphones": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "hlv": [
+        "id",
+        "name",
+        "category",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "source"
+    ],
+    "makeup": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "sportsshoes": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "suitcasesandtrolleybags": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "sunglasses": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ],
+    "tshirtsandpolos": [
+        "category",
+        "name",
+        "ratings",
+        "discount_price",
+        "actual_price",
+        "seller_name",
+        "seller_rating",
+        "description",
+        "highlights",
+        "image_links"
+    ]
+}

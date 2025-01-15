@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Query Optimizer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            display: flex;
+        }
+        .search-bar {
+            width: 40%;
+            padding: 10px;
+            margin: 20px;
+            box-shadow: 0px 0px 5px #aaa;
+        }
+        .output {
+            width: 55%;
+            padding: 20px;
+            margin: 20px;
+            border-left: 2px solid #ccc;
+            box-shadow: 0px 0px 5px #aaa;
+        }
+        input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Search bar on left -->
+        <div class="search-bar">
+            <h2>Search Query</h2>
+            <form action="/search" method="POST">
+                <input type="text" name="query" placeholder="Enter product name or profile" required>
+                <input type="submit" value="Search">
+            </form>
+        </div>
+
+        <!-- Output area on right -->
+        <div class="output">
+            {% if result %}
+                <h2>Results from {{ source }}:</h2>
+                <ul>
+                    {% for item in result %}
+                        <li>
+                            {% if source == "MySQL (Amazon/Flipkart)" %}
+                                <strong>{{ item.username }}</strong> - {{ item.email }}
+                            {% else %}
+                                <strong>{{ item['profile_name'] }}</strong> - {{ item['bio'] }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <h2>No results found for "{{ query }}"</h2>
+            {% endif %}
+        </div>
+    </div>
+
+</body>
+</html>

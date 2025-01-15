@@ -1,0 +1,62 @@
+{
+    "analysis_results": [
+        "_id",
+        "type",
+        "data"
+    ],
+    "exclusive_business_profiles": [
+        "_id",
+        "user_name",
+        "email",
+        "followers",
+        "business_type"
+    ],
+    "business_profiles_data": [
+        "_id",
+        "user_name",
+        "full_name",
+        "email",
+        "profile_picture",
+        "bio",
+        "followers",
+        "following",
+        "posts",
+        "location",
+        "website",
+        "date_joined",
+        "business_type"
+    ],
+    "exclusive_sales_partnership": [
+        "_id",
+        "username",
+        "name",
+        "email",
+        "business_category",
+        "company_name",
+        "product",
+        "profit_in_amazon_percent",
+        "profit_in_flipkart_percent"
+    ],
+    "sales_partnership_data": [
+        "_id",
+        "username",
+        "name",
+        "email",
+        "business_category",
+        "company_name",
+        "product",
+        "profit_in_amazon_percent",
+        "profit_in_flipkart_percent"
+    ],
+    "common_profiles": [
+        "_id",
+        "user_name",
+        "email",
+        "followers",
+        "business_type",
+        "company_name",
+        "product",
+        "profit_in_amazon_percent",
+        "profit_in_flipkart_percent"
+    ]
+}

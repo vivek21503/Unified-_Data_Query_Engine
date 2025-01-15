@@ -1,0 +1,101 @@
+
+SELECT name, discount_price FROM flipkart.headphones ORDER BY discount_price DESC LIMIT 10;
+
+SELECT name, discount_price FROM flipkart.headphones UNION ALL SELECT product_name, saleprice FROM amazon.headset ORDER BY discount_price DESC;
+
+SELECT name, discount_price FROM flipkart.headphones WHERE name LIKE '%bass%' ORDER BY discount_price DESC LIMIT 5;
+
+SELECT name, discount_price FROM flipkart.headphones WHERE name LIKE '%bass%';
+
+SELECT name, actual_price FROM flipkart.makeup ORDER BY actual_price ASC;
+
+SELECT name, discount_price FROM flipkart.headphones LIMIT 3;
+
+
+SELECT name, AVG(discount_price) AS avg_price FROM flipkart.headphones GROUP BY name HAVING AVG(discount_price) > 500;
+
+SELECT category, SUM(discount_price) AS sum_price FROM flipkart.makeup GROUP BY category HAVING SUM(discount_price) > 500;
+
+SELECT nameitems, reducedprice FROM amazon.headset LIMIT 5;
+
+
+
+/////////////////////////////////////////////////////////////////////
+SELECT name, discount_price FROM flipkart.headphones UNION ALL SELECT nameitems as name, reducedprice as discount_price FROM amazon.headset ORDER BY discount_price DESC LIMIT 5;
+
+
+
+//////////
+Instagram
+-- Get all business profiles
+SELECT * FROM instagram.business_profiles;
+
+
+-- Get specific business profile
+SELECT username, full_name, followers, business_type 
+FROM instagram.business_profiles 
+WHERE username LIKE '%matt%';
+
+-- Get high-follower profiles
+SELECT username, full_name, followers 
+FROM instagram.business_profiles 
+WHERE followers > 5000 
+ORDER BY followers DESC;
+
+
+///Sales Partnership Queries
+
+
+
+
+
+
+
+after
+
+SELECT user_name, followers, posts
+FROM instagram.business_profiles_data
+WHERE followers > 10
+LIMIT 10;
+//////////////////////////////////////////////////////////////////////////////xxxxxxxxxxx
+-- Get all sales partnerships
+SELECT * FROM instagram.sales_partnership;
+
+
+-- Get partnerships by category
+SELECT username, full_name, company_name, product 
+FROM instagram.sales_partnership 
+WHERE business_category = 'Tech';
+
+
+-- Get high profit partnerships
+SELECT username, company_name, product, profit_in_amazon_percent 
+FROM instagram.sales_partnership 
+WHERE profit_in_amazon_percent > 0.15 
+ORDER BY profit_in_amazon_percent DESC 
+LIMIT 5;
+//////////////////////////////////////////////////////////////////////////////xxxxxxxxxxx
+
+
+-- Top influencers by followers
+SELECT username, full_name, followers 
+FROM instagram.business_profiles 
+ORDER BY followers DESC 
+LIMIT 10;
+
+
+SELECT DISTINCT business_type 
+FROM instagram.business_profiles;
+
+
+
+-- Business Profiles queries
+SELECT * FROM instagram.business_profiles WHERE followers > 5000;
+
+-- Sales Partnership queries
+SELECT * FROM instagram.sales_partnership WHERE profit_in_amazon_percent > 0.15;
+
+-- Joins between collections
+SELECT bp.username, bp.followers, sp.product, sp.profit_in_amazon_percent
+FROM instagram.business_profiles bp
+JOIN instagram.sales_partnership sp ON bp.username = sp.username;

@@ -1,0 +1,109 @@
+
+SELECT name, discount_price FROM flipkart.headphones ORDER BY discount_price DESC LIMIT 10;
+
+
+SELECT name, discount_price FROM flipkart.headphones WHERE name LIKE '%bass%' ORDER BY discount_price DESC LIMIT 5;
+
+SELECT name, discount_price FROM flipkart.headphones WHERE name LIKE '%bass%';
+
+SELECT name, actual_price FROM flipkart.makeup ORDER BY actual_price ASC;
+
+SELECT name, discount_price FROM flipkart.headphones LIMIT 3;
+
+
+SELECT name, AVG(discount_price) AS avg_price FROM flipkart.headphones GROUP BY name HAVING AVG(discount_price) > 500;
+
+SELECT category, SUM(discount_price) AS sum_price FROM flipkart.makeup GROUP BY category HAVING SUM(discount_price) > 500;
+
+SELECT nameitems, reducedprice FROM amazon.headset LIMIT 5;
+
+
+
+-- Get all business profiles
+SELECT * FROM instagram.business_profiles_data;
+
+
+-- Get specific columns
+SELECT user_name, followers FROM instagram.business_profiles_data;
+
+-- Use WHERE/LIKE
+SELECT business_type FROM instagram.business_profiles_data WHERE business_type LIKE '%app%';
+
+-- Use ORDER BY and LIMIT
+SELECT username, followers FROM instagram.business_profiles_data ORDER BY followers DESC LIMIT 10;
+
+
+-- Get specific business profile
+SELECT user_name, full_name, followers, business_type 
+FROM instagram.business_profiles_data 
+WHERE user_name LIKE '%matt%';
+
+-- Get high-follower profiles
+SELECT user_name, full_name, followers 
+FROM instagram.business_profiles_data 
+WHERE followers > 5000 
+ORDER BY followers DESC;
+
+
+SELECT user_name, followers, posts
+FROM instagram.business_profiles_data
+WHERE followers > 10
+LIMIT 10;
+
+-- Top influencers by followers
+SELECT user_name, full_name, followers 
+FROM instagram.business_profiles_data
+ORDER BY followers DESC 
+LIMIT 10;
+
+
+
+-- Insert///////////////////////////////////////////////////////////
+
+INSERT INTO flipkart.headphones (
+    category,
+    name,
+    ratings,
+    discount_price,
+    actual_price,
+    seller_name,
+    seller_rating,
+    description,
+    highlights,
+    image_links
+) VALUES (
+    'Electronics',
+    'Sony WH-1000XM4 Wireless Noise Cancelling Headphones',
+    4.5,
+    24990,
+    29990,
+    'RetailNet',
+    4.8,
+    'Industry-leading noise cancellation with Dual Noise Sensor',
+    'Bluetooth 5.0, 30-hour battery life, Touch controls',
+    'https://example.com/image1.jpg'
+)
+
+
+-- check
+SELECT name FROM flipkart.headphones WHERE name LIKE "Sony%";
+
+
+
+
+
+//////////amazon////////////////////////////
+
+SELECT reducedprice, business_category, product, username, name, profit_in_amazon_percent FROM iia_amazon.amazon_sales_partership_view;
+
+
+
+
+
+
+//////////////////////////////combined///////////////////////////
+SELECT name FROM flipkart.headphones UNION ALL SELECT nameitems FROM iia_amazon.headset;
+
+SELECT nameitem FROM iia_amazon.appliances;
+
+SELECT reducedprice FROM iia_amazon.appliances;

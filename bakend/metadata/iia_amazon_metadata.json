@@ -1,0 +1,109 @@
+{
+    "beautyandmakeup": [
+        "_id",
+        "nameitem",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "combined_amazon_data": [
+        "_id",
+        "nameitem",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "trollebags": [
+        "_id",
+        "nameitem",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "headset": [
+        "_id",
+        "nameitems",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "appliances": [
+        "_id",
+        "nameitem",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "sunshades": [
+        "_id",
+        "nameitem",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "tshirts": [
+        "_id",
+        "nameitem",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ],
+    "business_category": [
+        "_id",
+        "username",
+        "name",
+        "email",
+        "business_category",
+        "company_name",
+        "product",
+        "profit_in_amazon_percent",
+        "profit_in_flipkart_percent",
+        "nameitem",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice",
+        "matched_column",
+        "similarity_score"
+    ],
+    "athleticshoes": [
+        "_id",
+        "nameitem",
+        "main_category",
+        "sub_category",
+        "image",
+        "link",
+        "user_ratings",
+        "reducedprice",
+        "actualprice"
+    ]
+}
