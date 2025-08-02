@@ -86,7 +86,7 @@ Once results from all systems are collected, they are unified, formatted, and di
 
 ---
 
-## 🧠 Natural Language Querying (Optional Module)
+## 🧠 Natural Language Querying
 
 Integrated **LLaMA-3.1** for converting user's natural language questions into SQL queries to make data access even more intuitive.
 
