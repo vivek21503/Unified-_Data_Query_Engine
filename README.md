@@ -46,7 +46,7 @@ Custom ETL scripts ingest data into MongoDB and MySQL from CSV and JSON files. S
 
 ### Communication
 
-Internal Python connectors and REST APIs are used to interface with all three systems.
+Internal Python connectors and APIs are used to interface with all three systems.
 
 ---
 
@@ -97,10 +97,6 @@ Integrated **LLaMA-3.1** for converting user's natural language questions into S
 ### Innovation
 
 The integration of dynamic schema matching, SQL-to-MongoDB translation, and distributed query decomposition sets this project apart from basic hardcoded solutions.
-
-### Scalability
-
-New data sources can be added by registering their schema and endpoint in the system. Schema changes are accommodated with minimal manual intervention.
 
 ---
 
